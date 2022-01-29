@@ -1,0 +1,19 @@
+.carrito {
+	height: 35px;
+}
+
+#cartCount {
+	background-color: rgb(32, 32, 162);
+	margin-left: -8px;
+	margin-top: -25px;
+}
+
+#searchInput {
+	margin-left: 20px;
+}
+
+.greeting {
+	font-weight: 800;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	color: rgb(16, 58, 16);
+}

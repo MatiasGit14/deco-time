@@ -1,5 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "./sillonLogo.svg";
+import logo from "../assets/sillonLogo.svg";
+import CartWidget from "../components/CartWidget";
 
 const NavBar = () => {
 	return (
@@ -23,7 +23,7 @@ const NavBar = () => {
 					aria-controls='navbarSupportedContent'
 					aria-expanded='false'
 					aria-label='Toggle navigation'>
-					<span class='navbar-toggler-icon'></span>
+					<span className='navbar-toggler-icon'></span>
 				</button>
 				<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
@@ -46,7 +46,8 @@ const NavBar = () => {
 							<a className='nav-link'>Accesorios</a>
 						</li>
 					</ul>
-					<form className='d-flex'>
+					<CartWidget />
+					<form className='d-flex' id='searchInput'>
 						<input
 							className='form-control me-2'
 							type='search'
