@@ -22,7 +22,7 @@
 .addCartContainer {
 	text-align: center;
 	width: max-content;
-	margin-left: 10px;
+	margin: 10px;
 }
 
 .counter {
@@ -59,4 +59,25 @@ input[type="number"]:hover::-webkit-outer-spin-button {
 .btn-addCart {
 	background-color: rgb(82, 105, 182);
 	border-color: rgb(82, 105, 182);
+}
+
+/*Cards*/
+
+.card {
+	width: 18rem;
+	margin: 10px;
+	align-items: center;
+}
+
+.cardContainer {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-img-top {
+	height: 200px;
 }
