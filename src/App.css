@@ -17,3 +17,46 @@
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	color: rgb(16, 58, 16);
 }
+
+/*Plus / Minus Counter*/
+.addCartContainer {
+	text-align: center;
+	width: max-content;
+	margin-left: 10px;
+}
+
+.counter {
+	width: 75px;
+	border: none;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: large;
+	text-decoration: none;
+	background-color: transparent;
+}
+input[type="number"] {
+	appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]:hover::-webkit-inner-spin-button,
+input[type="number"]:hover::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.down_count,
+.up_count {
+	background-color: rgb(82, 105, 182);
+	border-color: rgb(82, 105, 182);
+}
+
+.icon-plus,
+.icon-minus {
+	color: white;
+	font-weight: 700;
+}
+.btn-addCart {
+	background-color: rgb(82, 105, 182);
+	border-color: rgb(82, 105, 182);
+}
