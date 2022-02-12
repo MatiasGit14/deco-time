@@ -3,7 +3,7 @@ import Item from "./Item";
 const ItemList = (props) => {
 	return (
 		<div className='cardContainer'>
-			{props.products.map((prod) => (
+			{props.items.map((prod) => (
 				<Item
 					key={prod.id}
 					title={prod.title}

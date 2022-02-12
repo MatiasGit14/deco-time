@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import ItemCount from "./ItemCount";
 import customFetch from "../utils/customFetch";
 import productsList from "../utils/products";
 
@@ -17,15 +16,11 @@ const ItemListContainer = (props) => {
 		getProducts();
 	}, [products]);
 
-	const onAdd = (quantity) => {
-		alert("Se agregaron al carrito " + quantity + " unidades");
-	};
 	return (
 		<>
 			<p>ItemListContainer</p>
 			<p className='greeting'>{props.greeting}</p>
-			<ItemList products={products} />
-			<ItemCount stock={5} initial={1} onAdd={onAdd} />
+			<ItemList items={products} />
 		</>
 	);
 };

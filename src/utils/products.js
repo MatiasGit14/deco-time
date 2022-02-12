@@ -7,6 +7,8 @@ const productsList = [
 		description: "Almohadones de arpillera",
 		price: 1500,
 		pictureUrl: images.almohadon,
+		category: "Textiles",
+		categoryId: 1,
 		stock: 10,
 		details:
 			"Almohadones de arpillera con inscripciones, se pueden utilizar tanto en el interior como en el exterior",
@@ -17,6 +19,8 @@ const productsList = [
 		description: "Espejo estilo maquillaje",
 		price: 2700,
 		pictureUrl: images.espejo,
+		category: "Accesorios",
+		categoryId: 4,
 		stock: 8,
 		details: "Espejo chico para maquillaje o decorativo bañado en oro",
 	},
@@ -26,9 +30,23 @@ const productsList = [
 		description: "Farol de hierro y vidrio",
 		price: 190,
 		pictureUrl: images.farol,
+		category: "Exterior",
+		categoryId: 3,
 		stock: 13,
 		details:
 			"Farol tanto para interiores o exteriores de hierro forjado y tapas de vidrio. Incluye vela para interior del farol",
+	},
+	{
+		id: 4,
+		title: "Flores artificiales",
+		description: "Flores que imitan perfectamente las flores reales",
+		price: 100,
+		pictureUrl: images.flores,
+		category: "Flores",
+		categoryId: 2,
+		stock: 7,
+		details:
+			"Flores para decoracion de interiores, salas de espera, dar un aire natural y belleza",
 	},
 ];
 
