@@ -1,4 +1,3 @@
-import ItemCount from "./ItemCount";
 const Item = (props) => {
 	return (
 		<div className='card'>
@@ -21,7 +20,6 @@ const Item = (props) => {
 				<div className='collapse' id='collapseExample'>
 					<div className='card card-body'>{props.details}</div>
 				</div>
-				<ItemCount stock={props.stock} initial='1' />
 			</div>
 		</div>
 	);

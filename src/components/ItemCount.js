@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ItemCount = (props) => {
 	const [quantity, setQuantity] = useState(1);
@@ -7,17 +7,13 @@ const ItemCount = (props) => {
 		quantity < props.stock
 			? setQuantity(quantity + 1)
 			: alert("No hay suficiente Stock");
-
-		console.log(quantity);
 	};
 	const decrement = () => {
 		quantity > props.initial
 			? setQuantity(quantity - 1)
-			: alert("No puede agregar menos de 1 articulo");
+			: alert("No puede agregar al carrito menos de 1 articulo");
 	};
-	const onAdd = () => {
-		alert("Se agregaron al carrito " + quantity + " unidades");
-	};
+
 	return (
 		<>
 			{
@@ -40,7 +36,7 @@ const ItemCount = (props) => {
 					<button
 						className='btn btn-primary btn-addCart'
 						type='submit'
-						onClick={onAdd}>
+						onClick={props.onAdd(quantity)}>
 						Agregar al carrito
 					</button>
 				</div>
