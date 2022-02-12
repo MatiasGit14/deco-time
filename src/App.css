@@ -22,7 +22,7 @@
 .addCartContainer {
 	text-align: center;
 	width: max-content;
-	margin: 10px;
+	margin-top: 25px;
 }
 
 .counter {
@@ -80,4 +80,13 @@ input[type="number"]:hover::-webkit-outer-spin-button {
 
 .card-img-top {
 	height: 200px;
+}
+
+/*Details*/
+.detailContainer {
+	margin: 30px auto;
+}
+.detailPrice {
+	font-weight: 700;
+	font-size: 2rem;
 }

@@ -16,9 +16,6 @@ const ItemDetailContainer = () => {
 		getItem();
 	}, []);
 
-	const onAdd = (quantity) => {
-		alert("Se agregaron al carrito " + quantity + " unidades");
-	};
 	return <ItemDetail item={product} />;
 };
 

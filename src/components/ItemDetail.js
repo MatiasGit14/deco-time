@@ -1,23 +1,30 @@
 import ItemCount from "./ItemCount";
+
 const ItemDetail = (props) => {
 	const onAdd = (quantity) => {
 		alert("Se agregaron al carrito " + quantity + " unidades");
 	};
 	return (
 		<>
-			<div className='card'>
-				<img
-					className='card-img-top'
-					src={props.item.pictureUrl}
-					alt='Card cap'
-				/>
-				<div className='card-body'>
-					<h5 className='card-title'>{props.item.title}</h5>
-					<p className='card-text'>{props.item.description}</p>
-					<p>Stock disponible: {props.stock}</p>
+			<div className='container detailContainer'>
+				<div className='row'>
+					<div className='col-3'>
+						<img
+							className='card-img-top'
+							src={props.item.pictureUrl}
+							alt='Card cap'
+						/>
+						<ItemCount stock={5} initial={1} onAdd={onAdd} />
+					</div>
+					<div className='col-9'>
+						<h2>{props.item.title}</h2>
+						<h4 className='card-text'>{props.item.description}</h4>
+						<p>{props.item.details}</p>
+						<p>Stock disponible: {props.item.stock}</p>
+						<p className='detailPrice'>${props.item.price}</p>
+					</div>
 				</div>
 			</div>
-			<ItemCount stock={5} initial={1} onAdd={onAdd} />
 		</>
 	);
 };
