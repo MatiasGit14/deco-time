@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 const ItemCount = (props) => {
+	console.log(props);
 	const [quantity, setQuantity] = useState(1);
 
 	const increment = () => {
