@@ -27,11 +27,7 @@ const ItemListContainer = () => {
 					.catch((err) => console.log(err));
 	}, [categoryId]);
 
-	return (
-		<>
-			<ItemList items={products} />
-		</>
-	);
+	return <ItemList items={products} />;
 };
 
 export default ItemListContainer;

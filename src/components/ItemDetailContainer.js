@@ -7,10 +7,10 @@ import productsList from "../utils/products";
 const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({});
 	const { itemId } = useParams();
-	console.log(itemId);
+	const idParseado = parseInt(itemId);
 
 	const getItem = () => {
-		customFetch(2000, productsList[itemId])
+		customFetch(2000, productsList[idParseado - 1])
 			.then((prod) => setProduct(prod))
 			.catch((err) => console.log(err));
 	};
