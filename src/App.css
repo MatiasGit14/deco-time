@@ -57,11 +57,20 @@ input[type="number"]:hover::-webkit-outer-spin-button {
 	color: white;
 	font-weight: 700;
 }
+
+/* Botones agregar y finalizar*/
 .btn-addCart {
 	background-color: rgb(82, 105, 182);
 	border-color: rgb(82, 105, 182);
 }
-
+.btn-checkout,
+.btnComprar {
+	margin-top: 15px;
+	padding: 25px;
+	width: 100%;
+	font-size: larger;
+	font-weight: 600;
+}
 /*Cards*/
 
 .card {
@@ -90,4 +99,32 @@ input[type="number"]:hover::-webkit-outer-spin-button {
 .detailPrice {
 	font-weight: 700;
 	font-size: 2rem;
+}
+
+/* Carrito*/
+.cartTitles {
+	margin-top: 2%;
+}
+.cartHeader {
+	font-weight: bold;
+}
+.cartRow {
+	margin-top: 25px;
+	text-align: center;
+	align-items: center;
+}
+.continueShopping {
+	text-decoration: none;
+	text-align: left;
+	font-size: large;
+	font-weight: 600;
+}
+
+.cartImg {
+	width: 125px;
+	height: 125px;
+}
+
+.total {
+	text-align: end;
 }

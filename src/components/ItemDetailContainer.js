@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
 	const idParseado = parseInt(itemId);
 
 	const getItem = () => {
-		customFetch(2000, productsList[idParseado - 1])
+		customFetch(100, productsList[idParseado - 1])
 			.then((prod) => setProduct(prod))
 			.catch((err) => console.log(err));
 	};

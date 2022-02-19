@@ -1,8 +1,17 @@
 import ItemCount from "./ItemCount";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ item }) => {
+	const [itemCount, setItemCount] = useState(0);
+	const globalCart = useContext(CartContext);
+
 	const onAdd = (qty) => {
 		alert("Se agregaron al carrito " + qty + " unidades");
+		setItemCount(qty);
+		//Funcion global del Context
+		globalCart.addToCart({ ...item, qty }, qty);
 	};
 
 	return (
@@ -11,17 +20,25 @@ const ItemDetail = (props) => {
 				<div className='col-3'>
 					<img
 						className='card-img-top'
-						src={props.item.pictureUrl}
-						alt='Card cap'
+						src={item.pictureUrl}
+						alt={item.title}
 					/>
-					<ItemCount stock={5} initial={1} onAdd={onAdd} />
+					{itemCount === 0 ? (
+						<ItemCount stock={item.stock} initial={ItemCount} onAdd={onAdd} />
+					) : (
+						<Link to='/cart'>
+							<button className='btn btn-success btn-checkout'>
+								Finalizar Compra
+							</button>
+						</Link>
+					)}
 				</div>
 				<div className='col-9'>
-					<h2>{props.item.title}</h2>
-					<h4 className='card-text'>{props.item.description}</h4>
-					<p>{props.item.details}</p>
-					<p>Stock disponible: {props.item.stock}</p>
-					<p className='detailPrice'>${props.item.price}</p>
+					<h2>{item.title}</h2>
+					<h4 className='card-text'>{item.description}</h4>
+					<p>{item.details}</p>
+					<p>Stock disponible: {item.stock}</p>
+					<p className='detailPrice'>${item.price}</p>
 				</div>
 			</div>
 		</div>

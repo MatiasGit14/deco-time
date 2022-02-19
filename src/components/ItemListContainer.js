@@ -9,7 +9,7 @@ const ItemListContainer = () => {
 	const { categoryId } = useParams();
 
 	const getProducts = () => {
-		customFetch(2000, productsList)
+		customFetch(100, productsList)
 			.then((prod) => setProducts(prod))
 			.catch((err) => console.log(err));
 	};
