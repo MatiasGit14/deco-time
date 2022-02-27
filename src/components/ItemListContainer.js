@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import customFetch from "../utils/customFetch";
 import productsList from "../utils/products";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
 	const [products, setProducts] = useState([]);
@@ -15,6 +16,10 @@ const ItemListContainer = () => {
 	};
 
 	useEffect(() => {
+		// 		const firestoreFetch= async()=>{}
+		// const querySnapshot = await getDocs(collection(db, "products"));
+		// querySnapshot.forEach((doc) => {
+		//   console.log(`${doc.id} => ${doc.data()}`)};
 		categoryId === undefined
 			? getProducts()
 			: customFetch(

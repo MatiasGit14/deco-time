@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
 	const cartData = useContext(CartContext);
 
-	return (
+	return cartData.cartList.length > 0 ? (
 		<>
 			<div className='container'>
 				<div className='row cartTitles'>
@@ -83,6 +83,13 @@ const Cart = () => {
 				</div>
 			</div>
 		</>
+	) : (
+		<div className='container carroVacio'>
+			<h2>Aún no has agregado nada al carrito!</h2>
+			<Link to='/'>
+				<p className='continueShopping'>Seguí eligiendo tu mejor deco...</p>
+			</Link>
+		</div>
 	);
 };
 

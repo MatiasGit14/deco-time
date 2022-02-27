@@ -59,7 +59,9 @@ const NavBar = () => {
 							</Link>
 						</li>
 					</ul>
-					<CartWidget />
+					<Link to='/cart' style={{ textDecoration: "none" }}>
+						<CartWidget />
+					</Link>
 					<form className='d-flex' id='searchInput'>
 						<input
 							className='form-control me-2'
