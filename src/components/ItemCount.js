@@ -14,11 +14,12 @@ const ItemCount = (props) => {
 			: alert("No puede agregar al carrito menos de 1 articulo");
 		e.stopPropagation();
 	};
+
 	return (
 		<>
 			{
-				<div className='container addCartContainer'>
-					<div className='container'>
+				<div className=' addCartContainer'>
+					<div>
 						<button className='btn btn-info down_count' onClick={decrement}>
 							<i className='icon-minus'>-</i>
 						</button>

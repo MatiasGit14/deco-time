@@ -8,6 +8,7 @@ const ItemDetail = ({ item }) => {
 	const globalCart = useContext(CartContext);
 
 	const onAdd = (qty) => {
+		//CAMBIAR POR MODAL
 		alert("Se agregaron al carrito " + qty + " unidades");
 		setItemCount(qty);
 		//Funcion global del Context
@@ -23,15 +24,6 @@ const ItemDetail = ({ item }) => {
 						src={item.pictureUrl}
 						alt={item.title}
 					/>
-					{itemCount === 0 ? (
-						<ItemCount stock={item.stock} initial={ItemCount} onAdd={onAdd} />
-					) : (
-						<Link to='/cart'>
-							<button className='btn btn-success btn-checkout'>
-								Finalizar Compra
-							</button>
-						</Link>
-					)}
 				</div>
 				<div className='col-9'>
 					<h2>{item.title}</h2>
@@ -41,6 +33,15 @@ const ItemDetail = ({ item }) => {
 					<p className='detailPrice'>${item.price}</p>
 				</div>
 			</div>
+			{itemCount === 0 ? (
+				<ItemCount stock={item.stock} initial={ItemCount} onAdd={onAdd} />
+			) : (
+				<Link to='/cart'>
+					<button className='btn btn-success btn-checkout'>
+						Finalizar Compra
+					</button>
+				</Link>
+			)}
 		</div>
 	);
 };

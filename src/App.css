@@ -23,7 +23,7 @@
 /*Plus / Minus Counter*/
 .addCartContainer {
 	text-align: center;
-	width: max-content;
+	width: 25%;
 	margin-top: 25px;
 }
 
@@ -132,4 +132,18 @@ input[type="number"]:hover::-webkit-outer-spin-button {
 
 .carritoVacio {
 	text-align: center;
+}
+.btnComprarContainer {
+	text-align: right;
+}
+.btnComprar {
+	width: 30%;
+	margin-right: 10%;
+}
+
+@media (min-width: 200px) and (max-width: 450px) {
+	.addCartContainer {
+		text-align: center;
+		width: 100%;
+	}
 }

@@ -35,7 +35,6 @@ const CartContextProvider = ({ children }) => {
 		setCartList([]);
 		setTotalCost(0);
 		setTotalQtyWidget(0);
-		alert("Gracias por su compra!");
 	};
 
 	return (
