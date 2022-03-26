@@ -3,14 +3,13 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
-	//Creo un estado Global del Contexto  y lo paso como parametro del value a todos los hijos
 	const [cartList, setCartList] = useState([]);
 	let [totalCost, setTotalCost] = useState(0);
 	let [totalQtyWidget, setTotalQtyWidget] = useState(0);
 
-	//Funcion Global para el itemCount
+	//Context functions
 	const addToCart = (item, newQty) => {
-		// Reviso si ya esta en el carrito
+		// Chech if already exist
 		let inCart = cartList.find((prod) => prod.id === item.id);
 		if (inCart !== undefined) {
 			inCart.qty += newQty;
@@ -21,7 +20,7 @@ const CartContextProvider = ({ children }) => {
 		setTotalQtyWidget((totalQtyWidget += item.qty));
 	};
 
-	//Funcion global para borrar uno
+	//Delete one product
 	const deleteProduct = (id) => {
 		let deletedProduct = cartList.find((prod) => prod.id === id);
 		let deletedCost = deletedProduct.price * deletedProduct.qty;
@@ -30,7 +29,7 @@ const CartContextProvider = ({ children }) => {
 		setCartList(cartList.filter((prod) => prod.id !== id));
 	};
 
-	//Funcion global para remover todo y usar en CART
+	//Remove All
 	const removeList = () => {
 		setCartList([]);
 		setTotalCost(0);

@@ -13,10 +13,9 @@ const ItemDetail = ({ item }) => {
 	const handleShow = () => setShow(true);
 
 	const onAdd = (qty) => {
-		//CAMBIAR POR MODAL
 		handleShow();
 		setItemCount(qty);
-		//Funcion global del Context
+		//Function from context
 		globalCart.addToCart({ ...item, qty }, qty);
 	};
 
