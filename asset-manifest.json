@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deco-time/static/css/main.d06323ce.css",
-    "main.js": "/deco-time/static/js/main.edc9d86e.js",
-    "static/media/sillonLogo.svg": "/deco-time/static/media/sillonLogo.34063a63ea79c719096089278867c8d6.svg",
-    "index.html": "/deco-time/index.html",
-    "static/media/carrito.svg": "/deco-time/static/media/carrito.cc2c73e403cfe058123ba684c5ee5510.svg",
-    "main.d06323ce.css.map": "/deco-time/static/css/main.d06323ce.css.map",
-    "main.edc9d86e.js.map": "/deco-time/static/js/main.edc9d86e.js.map"
+    "main.css": "/MatiasGit14/deco-time.git/static/css/main.d06323ce.css",
+    "main.js": "/MatiasGit14/deco-time.git/static/js/main.567eb9a4.js",
+    "static/media/sillonLogo.svg": "/MatiasGit14/deco-time.git/static/media/sillonLogo.34063a63ea79c719096089278867c8d6.svg",
+    "index.html": "/MatiasGit14/deco-time.git/index.html",
+    "static/media/carrito.svg": "/MatiasGit14/deco-time.git/static/media/carrito.cc2c73e403cfe058123ba684c5ee5510.svg",
+    "main.d06323ce.css.map": "/MatiasGit14/deco-time.git/static/css/main.d06323ce.css.map",
+    "main.567eb9a4.js.map": "/MatiasGit14/deco-time.git/static/js/main.567eb9a4.js.map"
   },
   "entrypoints": [
     "static/css/main.d06323ce.css",
-    "static/js/main.edc9d86e.js"
+    "static/js/main.567eb9a4.js"
   ]
 }
